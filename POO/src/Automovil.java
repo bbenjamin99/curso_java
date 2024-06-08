@@ -29,4 +29,13 @@ public class Automovil {
         return "El auto " + fabricante + " esta frenando...!";
     }
 
+    public String acelerarFrenar(int rpm){
+        String acelerar = this.acelerar(rpm);
+        String frenar = this.frenar();
+
+        return acelerar(rpm) + " " + frenar;
+
+
+    }
+
 }
