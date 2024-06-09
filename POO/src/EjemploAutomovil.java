@@ -2,16 +2,16 @@ public class EjemploAutomovil {
     public static void main(String[] args)  {
 
         Automovil subaru = new Automovil();
-        subaru.fabricante = "Subaru";
-        subaru.modelo = "Impreza";
-        subaru.cilindrada = 2.0f;
-        subaru.color = "Blanco";
+        subaru.setFabricante("Subaru");
+        subaru.setModelo("Impreza");
+        subaru.setCilindrada(2.0f);
+        subaru.setColor("Blanco");
 
         Automovil mazda = new Automovil();
-        mazda.fabricante = "Mazda";
-        mazda.modelo = "BT-50";
-        mazda.cilindrada = 3.0;
-        mazda.color = "Rojo";
+        mazda.setFabricante("Mazda");
+        mazda.setModelo("BT-50");
+        mazda.setCilindrada(3.0f);
+        mazda.setColor("Rojo");
 
 
         System.out.println(subaru.detalle());
@@ -21,5 +21,9 @@ public class EjemploAutomovil {
         System.out.println(subaru.frenar());
 
         System.out.println(subaru.acelerarFrenar(123));
+
+        System.out.println("KM por litros: " +  subaru.calcularConsumo(300,0.75f) );
+        System.out.println("KM por litros: " +  subaru.calcularConsumo(300,60) );
+        
     }
 }
