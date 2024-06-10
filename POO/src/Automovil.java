@@ -10,6 +10,9 @@ public class Automovil {
 
     static String colorPatente = "Naranja";
 
+    public static final int VELOCIDAD_MAX_CARRETERA = 120;
+    public static final int VELOCIDAD_MAX_CIUDAD = 60;
+
 
     // Constructor
     public Automovil() {
