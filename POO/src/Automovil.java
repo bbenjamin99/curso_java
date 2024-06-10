@@ -3,8 +3,8 @@ public class Automovil {
 
     // Props
     private String fabricante;
-    private String modelo;
-    private String color = "Gris";
+    private String modelo;  
+    private Color color = Color.GRIS;
     private double cilindrada;
     private int capacidadTanque = 40;
 
@@ -12,6 +12,12 @@ public class Automovil {
 
     public static final int VELOCIDAD_MAX_CARRETERA = 120;
     public static final int VELOCIDAD_MAX_CIUDAD = 60;
+
+    public static final Color COLOR_ROJO = Color.ROJO;
+    public static final Color COLOR_AMARILLO = Color.AMARILLO;
+    public static final Color COLOR_AZUL = Color.AZUL;
+    public static final Color COLOR_BLANCO = Color.BLANCO;
+    public static final Color COLOR_GRIS = Color.GRIS; 
 
 
     // Constructor
@@ -24,12 +30,12 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public Automovil(String fabricante, String modelo, String color) {
+    public Automovil(String fabricante, String modelo, Color color) {
         this(fabricante,modelo);
         this.color = color;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrada) {
+    public Automovil(String fabricante, String modelo, Color color, double cilindrada) {
         this(fabricante,modelo, color);
         this.cilindrada = cilindrada;
     }
@@ -59,11 +65,11 @@ public class Automovil {
         this.cilindrada = cilindrada;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 

@@ -6,13 +6,13 @@ public class EjemploAutomovilStatic {
         subaru.setFabricante("Subaru");
         subaru.setModelo("Impreza");
         subaru.setCilindrada(2.0f);
-        subaru.setColor("Blanco");
+        subaru.setColor(Color.AZUL);
     
         Automovil mazda = new Automovil();
         
         mazda.setModelo("BT-50");
         mazda.setCilindrada(3.0f);
-        mazda.setColor("Rojo");
+        mazda.setColor(Color.ROJO);
         System.out.println(Automovil.getColorPatente());
     }
     
