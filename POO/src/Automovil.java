@@ -8,7 +8,7 @@ public class Automovil {
     private double cilindrada;
     private int capacidadTanque = 40;
 
-    static String colorPatente = "Naranja";
+    static Color colorPatente = Color.GRIS;
 
     public static final int VELOCIDAD_MAX_CARRETERA = 120;
     public static final int VELOCIDAD_MAX_CIUDAD = 60;
@@ -81,7 +81,7 @@ public class Automovil {
                 append("\n" + this.modelo).
                 append("\n" + this.color).
                 append("\n" + this.cilindrada).
-                append("\n" + this.colorPatente);
+                append("\n" + colorPatente);
 
         String detalle = sb.toString();
         return detalle;
@@ -113,7 +113,7 @@ public class Automovil {
         return km / (porcentajeCombustible * capacidadTanque / 100f);
     }
 
-    public static String getColorPatente(){
+    public static Color getColorPatente(){
         return colorPatente;
     }
 
@@ -139,7 +139,7 @@ public class Automovil {
 
     @Override
     public String toString() {
-        return "Automovil [fabricante=" + fabricante + ", modelo=" + modelo + ", color=" + color + ", cilindrada="
+        return "Automovil [fabricante=" + fabricante + ", modelo=" + modelo + ", color=" + color.getColor() + ", cilindrada="
                 + cilindrada + ", capacidadTanque=" + capacidadTanque + "]";
     }
 
