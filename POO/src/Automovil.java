@@ -8,6 +8,8 @@ public class Automovil {
     private double cilindrada;
     private int capacidadTanque = 40;
 
+    private TipoAutomovil tipo;
+
     static Color colorPatente = Color.GRIS;
 
     public static final int VELOCIDAD_MAX_CARRETERA = 120;
@@ -73,6 +75,19 @@ public class Automovil {
         this.color = color;
     }
 
+    public TipoAutomovil getTipo(){
+        return this.tipo;
+    }
+
+    public void setTipo(TipoAutomovil tipo){
+        this.tipo = tipo;
+    }
+
+
+
+
+
+
     // Methods
     public String detalle() {
 
@@ -81,7 +96,10 @@ public class Automovil {
                 append("\n" + this.modelo).
                 append("\n" + this.color).
                 append("\n" + this.cilindrada).
-                append("\n" + colorPatente);
+                append("\n" + colorPatente).
+                append("\n" + this.getTipo().getNombre()).
+                append("\n" + this.getTipo().getNumPuertas()).
+                append("\n" + this.getTipo().getDescripcion());
 
         String detalle = sb.toString();
         return detalle;

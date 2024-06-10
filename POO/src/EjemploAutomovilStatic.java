@@ -7,6 +7,8 @@ public class EjemploAutomovilStatic {
         subaru.setModelo("Impreza");
         subaru.setCilindrada(2.0f);
         subaru.setColor(Color.AZUL);
+        subaru.setTipo(TipoAutomovil.PICKUP);
+        System.out.println(subaru.getTipo());
     
         Automovil mazda = new Automovil();
         
