@@ -23,7 +23,7 @@ public class Persona {
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lastname = lastname; 
     }
 
     public String getLastname(){

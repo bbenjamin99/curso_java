@@ -22,7 +22,7 @@ public class Automovil {
     public static final Color COLOR_GRIS = Color.GRIS; 
 
 
-    // Constructor
+    // Constructora
     public Automovil() {
 
     }
