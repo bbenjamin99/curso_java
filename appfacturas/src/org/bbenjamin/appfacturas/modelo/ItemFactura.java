@@ -5,11 +5,31 @@ public class ItemFactura {
     private Producto producto;
     private int cantidad;
 
+    // Constructor
+    public ItemFactura(int cantidad, Producto producto){
+        this.cantidad = cantidad;
+        this.producto = producto;
+    }
+
+    // getter & Setter
+    public int getCantidad(){
+        return cantidad;
+    }
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Producto geProducto(){
+        return producto;
+    }
+    public void setProducto(Producto producto){
+        this.producto = producto;
+    }
 
 
     // methods
-    public double calcularImporte(){
-        return 2.2d;
+    public float calcularImporte(){
+        return (this.cantidad * this.producto.getPrecio());
     }
 
 }
