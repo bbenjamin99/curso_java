@@ -19,7 +19,7 @@ public class ItemFactura {
         this.cantidad = cantidad;
     }
 
-    public Producto geProducto(){
+    public Producto getProducto(){
         return producto;
     }
     public void setProducto(Producto producto){
