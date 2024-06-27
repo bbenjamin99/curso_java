@@ -17,7 +17,7 @@ public class Factura {
     private int indiceItems;
 
     // Constructros
-    public Factura(String descripcion, Cliente cliente,Date fecha){
+    public Factura(String descripcion, Cliente cliente){
         this.descripcion = descripcion;
         this.cliente = cliente;
         this.items = new ItemFactura[MAX_ITEMS ];
@@ -72,14 +72,14 @@ public class Factura {
         StringBuilder sb = new StringBuilder("Factura N°: ").append(folio).
          append("\nCliente: ").append(this.cliente.getNombre())
         .append("\tNIF: ").append(this.cliente.getNif())
-        .append("\nDescripción: ").append(this.getDescripcion()+"\n")
-        .append("\n#\t Nombre\t $\tCant.\tTotal\n");
+        .append("\nDescripción: ").append(this.getDescripcion()+"\n");
         
 
         SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM yyyy");
         sb.append("Fecha de emision: ")
-          .append(df.format(this.fecha))
-          .append("\n");
+          .append(df.format(this.fecha))    
+          .append("\n")
+          .append("\n#\t Nombre\t $\tCant.\tTotal\n");
 
         
 
