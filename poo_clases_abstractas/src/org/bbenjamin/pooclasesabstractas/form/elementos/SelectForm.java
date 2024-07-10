@@ -1,55 +1,49 @@
-package org.bbenjamin.pooclasesabstractas.form.elementos;
+package org.aguzman.pooclasesabstractas.form.elementos;
+
+import org.aguzman.pooclasesabstractas.form.elementos.select.Opcion;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bbenjamin.pooclasesabstractas.form.elementos.select.Opcion;
-
 public class SelectForm extends ElementoForm {
 
-    //Attributes
-     private List<Opcion> opciones;
+    private List<Opcion> opciones;
 
-    // Constructor
-    public SelectForm(String nombre){
+    public SelectForm(String nombre) {
         super(nombre);
         this.opciones = new ArrayList<Opcion>();
     }
 
-    public SelectForm(String nombre, List<Opcion> opciones){
-        this(nombre);
+    public SelectForm(String nombre, List<Opcion> opciones) {
+        super(nombre);
         this.opciones = opciones;
     }
 
-    // Method
     public SelectForm addOpcion(Opcion opcion){
         this.opciones.add(opcion);
-        return this; 
+        return this;
     }
 
     @Override
     public String dibujarHtml() {
-        StringBuilder sb = new StringBuilder("<select ");
-        sb.append("name=' " ).append(this.nombre).append("'>");
+        StringBuilder sb =  new StringBuilder("<select ");
+        sb.append("name='")
+                .append(this.nombre)
+                .append("'>");
 
-        for (Opcion opcion : this.opciones) {
-            sb.append("\n <option value=' ").append(opcion.getValor());
-            
-            if(opcion.isSelected() ) {
+        for(Opcion opcion: this.opciones){
+            sb.append("\n<option value='")
+                    .append(opcion.getValor())
+                    .append("'");
+            if(opcion.isSelected()){
                 sb.append(" selected");
                 this.valor = opcion.getValor();
             }
-            
-            sb.append("'>")
-            .append(opcion.getNombre())
-            .append("</option>");
-            }
-
-            sb.append("</select>");
-
-         return sb.toString();
+            sb.append(">")
+                    .append(opcion.getNombre())
+                    .append("</option>");
+        }
+        sb.append("</select>");
+        return sb.toString();
     }
-
-    
-
 }

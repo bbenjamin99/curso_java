@@ -1,11 +1,9 @@
-package org.bbenjamin.pooclasesabstractas.form.elementos;
+package org.aguzman.pooclasesabstractas.form.elementos;
 
-public class InputForm extends ElementoForm{
+public class InputForm extends ElementoForm {
 
-    // Methods
     private String tipo = "text";
 
-    // Constructor
     public InputForm(String nombre) {
         super(nombre);
     }
@@ -15,23 +13,18 @@ public class InputForm extends ElementoForm{
         this.tipo = tipo;
     }
 
-    // Getters & Setters
     public String getTipo() {
         return tipo;
     }
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-
-    // methods
     @Override
     public String dibujarHtml() {
-
-        return "<input type=\""+ this.tipo
-         +"\" name=\""+ this.nombre 
-         +"\" value=\""+ this.valor
-         + "\" >";
-
+        return "<input type=\"" + this.tipo
+                + "\" name=\"" + this.nombre
+                + "\" value=\"" + this.valor + "\">";
     }
 }
