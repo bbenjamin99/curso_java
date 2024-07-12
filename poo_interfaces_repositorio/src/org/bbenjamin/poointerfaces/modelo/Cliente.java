@@ -1,5 +1,7 @@
 package org.bbenjamin.poointerfaces.modelo;
 
+import java.util.Objects;
+
 public class Cliente {
 
     //Attributes
@@ -53,7 +55,25 @@ public class Cliente {
         sb.append(", apellido=").append(apellido);
         
         return sb.toString();
+
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        return Objects.equals(this.id, other.id);
+    }
+
+    
     
 
 

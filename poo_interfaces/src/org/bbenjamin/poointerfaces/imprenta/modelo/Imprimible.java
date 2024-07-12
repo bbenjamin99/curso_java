@@ -6,3 +6,4 @@ public interface Imprimible {
           return "Imprimiendo un valor por default!";
      }    
 }
+     
