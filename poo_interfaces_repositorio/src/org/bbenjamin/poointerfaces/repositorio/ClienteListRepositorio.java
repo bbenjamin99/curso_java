@@ -54,7 +54,8 @@ private List<Cliente> dataSource;
     //Ordenable Repositorio
     @Override
     public List<Cliente> listar(String campo, Direccion dir) {
-        dataSource.sort((a,b) -> {
+        List<Cliente> listaOrdenada = new ArrayList<>(this.dataSource);
+        listaOrdenada.sort((a,b) -> {
                 int resultado = 0;
                 if(dir == Direccion.ASC){
                     switch(campo) {
@@ -79,7 +80,7 @@ private List<Cliente> dataSource;
             return resultado;
             
         });
-    return dataSource;
+    return listaOrdenada    ;
     }
 
     @Override
