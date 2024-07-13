@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.bbenjamin.poointerfaces.modelo.Cliente;
+import org.bbenjamin.poointerfaces.modelo.ClientePremium;
 
 public class EjemploGenericos {
 
@@ -27,11 +28,24 @@ public class EjemploGenericos {
         enteros2.forEach(System.out::println);
         nombres.forEach(System.out::println);
 
+        List<ClientePremium> clientesPremium = fromArrayToList(
+            new ClientePremium[]{ new ClientePremium("CLIENTE", "PREMIUM 2")});
+
 
 
     } 
 
     public static <T> List<T> fromArrayToList(T[] c) {
+        
+        return Arrays.asList(c);
+    }
+
+    public static <T extends Number> List<T> fromArrayToList(T[] c) {
+        
+        return Arrays.asList(c);
+    }
+
+    public static <T extends Cliente & Comparable<T>> List<T> fromArrayToList(T[] c) {
         
         return Arrays.asList(c);
     }
