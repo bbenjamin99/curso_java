@@ -2,32 +2,20 @@ package org.bbenjamin.poointerfaces.modelo;
 
 import java.util.Objects;
 
-public class Cliente {
+public class Cliente extends BaseEntity{
 
     //Attributes
-    private Integer id;
+
     private String nombre;
     private String apellido;
     
-    private static int ultimoId;
-    
-    //Constructor
-    public Cliente() {
-        this.id = ++ultimoId;
-    }
-
+ 
     public Cliente(String nombre, String apellido){
-        this();
+        super();
         this.nombre = nombre;
         this.apellido = apellido;
     }
     // Getters & Setters
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id){
-        this.id = id;
-    }
     public String getNombre() {
         return nombre;
     }

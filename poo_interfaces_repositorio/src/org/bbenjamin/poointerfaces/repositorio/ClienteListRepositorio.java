@@ -11,20 +11,6 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente>{
 // CRUD REPOSITORIO
 
     @Override
-    public Cliente porId(Integer id) {
-        Cliente clienteSeleccionado = null;
-
-           for(Cliente cli : dataSource) {
-            if(cli.getId().equals(id)) {
-                clienteSeleccionado = cli; 
-                break;
-            }
-        }
-        return clienteSeleccionado;
-    };
-    
-
-    @Override
     public void editar(Cliente cliente) {
         Cliente clienteEditar = this.porId(cliente.getId());
         clienteEditar.setNombre(cliente.getNombre());
