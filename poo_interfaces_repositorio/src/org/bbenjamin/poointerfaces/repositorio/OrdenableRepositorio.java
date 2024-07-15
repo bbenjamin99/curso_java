@@ -1,11 +1,10 @@
 package org.bbenjamin.poointerfaces.repositorio;
 
 import java.util.List;
-import org.bbenjamin.poointerfaces.modelo.Cliente;
 
-public interface OrdenableRepositorio {
+public interface OrdenableRepositorio<T> {
 
     // Methods
-    List<Cliente> listar(String campo, Direccion dir); 
+    List<T> listar(String campo, Direccion dir); 
 
 }

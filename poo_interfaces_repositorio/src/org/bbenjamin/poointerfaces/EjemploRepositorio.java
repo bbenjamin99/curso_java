@@ -11,7 +11,7 @@ import org.bbenjamin.poointerfaces.repositorio.PaginableRepositorio;
 public class EjemploRepositorio {
     public static void main(String[] args) {
 
-        CrudRepositorio repo = new ClienteListRepositorio();
+        CrudRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear( new Cliente("Benjamin", "Benitez"));
         repo.crear( new Cliente("Ricardo", "Ioirio"));
         repo.crear(new Cliente("Lionel", "Messi"));

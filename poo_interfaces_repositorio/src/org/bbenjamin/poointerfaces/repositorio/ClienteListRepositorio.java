@@ -4,22 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import org.bbenjamin.poointerfaces.modelo.Cliente;
 
-public class ClienteListRepositorio implements CrudRepositorio, OrdenableRepositorio, PaginableRepositorio{
+public class ClienteListRepositorio extends AbstractListRepositorio<Cliente>{
 
-// Atributes
-private List<Cliente> dataSource;
-
-// Constructor
-    public ClienteListRepositorio() {
-        this.dataSource = new ArrayList<>();
-    }
 
 // Methods
 // CRUD REPOSITORIO
-    @Override
-    public List<Cliente> listar(){
-        return dataSource;
-    }
 
     @Override
     public Cliente porId(Integer id) {
@@ -32,12 +21,8 @@ private List<Cliente> dataSource;
             }
         }
         return clienteSeleccionado;
-    }
-
-    @Override
-    public void crear(Cliente cliente) {
-        this.dataSource.add(cliente);
-    }
+    };
+    
 
     @Override
     public void editar(Cliente cliente) {
@@ -45,13 +30,8 @@ private List<Cliente> dataSource;
         clienteEditar.setNombre(cliente.getNombre());
         clienteEditar.setApellido(cliente.getApellido());
     }
-
-    @Override
-    public void eliminar(Integer id) {
-        this.dataSource.remove(this.porId(id));
-    }
     
-    //Ordenable Repositorio
+    // Ordenable Repositorio
     @Override
     public List<Cliente> listar(String campo, Direccion dir) {
         List<Cliente> listaOrdenada = new ArrayList<>(this.dataSource);
@@ -80,12 +60,7 @@ private List<Cliente> dataSource;
             return resultado;
             
         });
-    return listaOrdenada    ;
-    }
-
-    @Override
-    public List<Cliente> listar(int desde, int hasta) {
-        return dataSource.subList(desde, hasta);
+    return listaOrdenada;
     }
 
    

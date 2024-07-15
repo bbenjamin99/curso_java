@@ -2,12 +2,10 @@ package org.bbenjamin.poointerfaces.repositorio;
 
 import java.util.List;
 
-import org.bbenjamin.poointerfaces.modelo.Cliente;
-
-public interface PaginableRepositorio {
+public interface PaginableRepositorio<T> {
     
 
     //Methods
-    List<Cliente> listar(int desde, int hasta);
-
+    List<T> listar(int desde, int hasta);
+    
 }
