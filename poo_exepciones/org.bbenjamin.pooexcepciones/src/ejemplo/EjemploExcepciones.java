@@ -29,6 +29,6 @@ public class EjemploExcepciones {
             System.out.println("Es opcional pero se ejecuta siempre con excepcion o sin...");
         }
 
-        System.out.println("Continúo con la ejecución       ");
+        System.out.println("Continúo con la ejecución");
     }
 }
