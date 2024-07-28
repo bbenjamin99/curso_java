@@ -1,4 +1,4 @@
-package org.bbenjamin.ejemplos.set;
+package org.bbenjamin.ejemplos.list;
 
 import java.util.ArrayList;
 import java.util.List;
