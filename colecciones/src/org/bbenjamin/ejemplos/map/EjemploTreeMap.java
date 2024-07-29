@@ -3,18 +3,19 @@ package org.bbenjamin.ejemplos.map;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
-public class EjemploHashMap {
+public class EjemploTreeMap {
     public static void main(String[] args) {
         
         Map<String, Object> persona = new HashMap<>();
-        persona.put(null, "1234");
-        persona.put(null, "1234");
+        // persona.put(null, "1234");
+        // persona.put(null, "1234");
         persona.put("nombre", "Benja");
         persona.put("apellido", "bennito");
         persona.put("email", "bbenjamin@gmail.com");
         
-        Map<String, String> direccion = new HashMap<>();
+        Map<String, String> direccion = new TreeMap<>();
         direccion.put("pais", "USA");
         direccion.put("estado", "California");
         direccion.put("ciudad", "Santa Barbara");
@@ -28,7 +29,7 @@ public class EjemploHashMap {
         String ciudad = direccionPersona.get("ciudad"); 
         String barrio = direccionPersona.getOrDefault("ciudad", ciudad);
 
-        
+
         System.out.println("pais:" + pais);
         System.out.println("ciudad:" + ciudad);
         System.out.println("barrio:" + barrio);
